@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cctype>
 
 std::string add(double number, double number2, double ans){ //defines function add as string containing listed varaibles
   ans = number + number2; //add number and number2
