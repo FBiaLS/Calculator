@@ -39,6 +39,9 @@ int main() {
     cout << "Enter the second number for your calculation\n"; //print
     cin >> number2; //input for number2
   }
+  else {
+    cout << "Error. Inalid input.\n"
+  }
   }
 
   if (calc == "add" || calc == "plus" || calc == "+"){ //if calc is add
