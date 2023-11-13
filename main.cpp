@@ -60,8 +60,8 @@ int main() {
     cout << "What would you like to do " << number << " to the power of?\n"; //print
     cin >> number2; //input for number2
     ans = (number, number2);
-    }
     cout << number << " to the power of " << number2 << " = " << ans << "\n"; //print
+    }
   }
   else{
     cout << "Error: Invalid Input\n"; //print
