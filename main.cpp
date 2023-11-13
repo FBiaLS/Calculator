@@ -37,8 +37,7 @@ int main() {
     cout << "Enter the second number for your calculation\n"; //print
     cin >> number2; //input for number2
   }
-  }
-
+  
   if (calc == "add" || calc == "plus" || calc == "+"){ //if calc is add
     add(number, number2, ans);
     return 0;
