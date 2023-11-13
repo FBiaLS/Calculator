@@ -59,7 +59,7 @@ int main() {
   else if (calc == "powers" || calc == "power" || calc == "use powers" || calc == "^"){
     cout << "What would you like to do " << number << " to the power of?\n"; //print
     cin >> number2; //input for number2
-    ans = (number, number2);
+    ans = pow(number, number2);
     cout << number << " to the power of " << number2 << " = " << ans << "\n"; //print
     }
   }
