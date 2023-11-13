@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cmaths>
+#include <cmath>
 using namespace std;
 
 string inp2(double number2){
