@@ -40,7 +40,7 @@ int main() {
     cin >> number2; //input for number2
   }
   else {
-    cout << "Error. Inalid input.\n"
+    cout << "Error: Inalid input.\n"
   }
   }
 
