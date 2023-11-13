@@ -41,19 +41,19 @@ int main() {
   cin >> calc; //input for calc
 
   if (calc == "add" || calc == "plus" || calc == "+"){ //if calc is add
-    inp2(number2)
+    inp2(number2);
     add(number, number2, ans);
   }
   else if (calc == "subtract" || calc == "minus" || calc == "-"){ //if calc is subtract
-    inp2(number2)
+    inp2(number2);
     subtract(number, number2, ans);
   }
   else if (calc == "multiply" || calc == "times" || calc == "x"){ //if calc is multiply
-    inp2(number2)
+    inp2(number2);
     multiply(number, number2, ans);
   }
   else if (calc == "divide" || calc == "/" || calc == "÷"){ //if calc is divide
-    inp2(number2)
+    inp2(number2);
     divide(number, number2, ans);
   }
   else if (calc == "powers" || calc == "power" || calc == "use powers" || calc == "^"){
