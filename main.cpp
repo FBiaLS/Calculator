@@ -2,6 +2,11 @@
 #include <cmaths>
 using namespace std;
 
+string inp2(double number2){
+  cout << "Enter the second number for your calculation\n"; //print
+  cin >> number2; //input for number2
+}
+
 string add(double number, double number2, double ans){ //defines function add as string containing listed varaibles
   ans = number + number2; //add number and number2
   cout << number << "+" << number2 << "=" << ans << "\n"; //print
@@ -34,22 +39,21 @@ int main() {
   cin >> number; //input for number
   cout << "Would you like to add, subtract, multiply, divide or use powers?\n"; //print
   cin >> calc; //input for calc
-  if (calc != "powers" || calc != "power" || calc != "use powers" || calc != "^"){
-    cout << "Enter the second number for your calculation\n"; //print
-    cin >> number2; //input for number2
-  }
 
   if (calc == "add" || calc == "plus" || calc == "+"){ //if calc is add
+    inp2(number2)
     add(number, number2, ans);
-    return 0;
   }
   else if (calc == "subtract" || calc == "minus" || calc == "-"){ //if calc is subtract
+    inp2(number2)
     subtract(number, number2, ans);
   }
   else if (calc == "multiply" || calc == "times" || calc == "x"){ //if calc is multiply
+    inp2(number2)
     multiply(number, number2, ans);
   }
   else if (calc == "divide" || calc == "/" || calc == "÷"){ //if calc is divide
+    inp2(number2)
     divide(number, number2, ans);
   }
   else if (calc == "powers" || calc == "power" || calc == "use powers" || calc == "^"){
