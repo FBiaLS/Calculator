@@ -33,15 +33,9 @@ int main() {
   cin >> number; //input for number
   cout << "Would you like to add, subtract, multiply, divide or use powers?\n"; //print
   cin >> calc; //input for calc
-  if (calc == "powers" || calc == "power" || calc == "use powers" || calc == "^"){
-    cout << "\n";
-  }
-  else if (calc == "add" || calc == "plus" || calc == "+" || calc == "subtract" || calc == "minus" || calc == "-" || calc == "multiply" || calc == "times" || calc == "x" || calc == "divide" || calc == "/" || calc == "÷"){
+  if (calc != "powers" || calc != "power" || calc != "use powers" || calc != "^"){
     cout << "Enter the second number for your calculation\n"; //print
     cin >> number2; //input for number2
-  }
-  else {
-    cout << "Error: Inalid input.\n";
   }
   }
 
