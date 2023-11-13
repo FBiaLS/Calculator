@@ -62,7 +62,6 @@ int main() {
     ans = pow(number, number2);
     cout << number << " to the power of " << number2 << " = " << ans << "\n"; //print
   }
-  }
   else{
     cout << "Error: Invalid Input\n"; //print
   }
