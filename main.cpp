@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmaths>
 using namespace std;
 
 string add(double number, double number2, double ans){ //defines function add as string containing listed varaibles
@@ -37,7 +38,7 @@ int main() {
     cout << "Enter the second number for your calculation\n"; //print
     cin >> number2; //input for number2
   }
-  
+
   if (calc == "add" || calc == "plus" || calc == "+"){ //if calc is add
     add(number, number2, ans);
     return 0;
@@ -54,9 +55,7 @@ int main() {
   else if (calc == "powers" || calc == "power" || calc == "use powers" || calc == "^"){
     cout << "What would you like to do " << number << " to the power of?\n"; //print
     cin >> number2; //input for number2
-    while (count <= number2){
-      ans = number * number; //multiply number by itself
-      count = count + 1; //add 1 to count
+    ans = number ** number2
     }
     cout << number << " to the power of " << number2 << " = " << ans << "\n"; //print
   }
