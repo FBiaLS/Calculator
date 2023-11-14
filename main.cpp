@@ -73,6 +73,8 @@ if (calc == "powers" || calc == "power" || calc == "use powers" || calc == "^"){
   cout << number << " to the power of " << number2 << " = " << ans << "\n"; //print
   }
 else if (calc == "roots" || calc == "root"){
+  cout << "What number do you want to find the square root of?\n";
+  cin >> number;
   ans = sqrt(number);
   cout << "The square root of " << number << "is " << ans << "\n";
 }
