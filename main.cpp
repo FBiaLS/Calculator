@@ -5,6 +5,7 @@ using namespace std;
 double inp2(double number2){
   cout << "Enter the second number for your calculation\n"; //print
   cin >> number2; //input for number2
+  return number2;
 }
 
 double add(double number, double number2, double ans){ //defines function add as string containing listed varaibles
@@ -43,22 +44,18 @@ int main() {
   if (calc == "add" || calc == "plus" || calc == "+"){ //if calc is add
     number2 = inp2(number2);
     add(number, number2, ans);
-    return number2;
   }
   else if (calc == "subtract" || calc == "minus" || calc == "-"){ //if calc is subtract
     number2 = number2 = inp2(number2);
     subtract(number, number2, ans);
-    return number2;
   }
   else if (calc == "multiply" || calc == "times" || calc == "x"){ //if calc is multiply
     number2 = inp2(number2);
     multiply(number, number2, ans);
-    return number2;
   }
   else if (calc == "divide" || calc == "/" || calc == "÷"){ //if calc is divide
     number2 = inp2(number2);
     divide(number, number2, ans);
-    return number2;
   }
   else if (calc == "powers" || calc == "power" || calc == "use powers" || calc == "^"){
     cout << "What would you like to do " << number << " to the power of?\n"; //print
