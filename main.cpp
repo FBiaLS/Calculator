@@ -83,6 +83,33 @@ else{
 }
 }
 
+string func(string mode, double number, double ans){
+cout << "What type of formula do you want to use?\n";
+cout << "1. Circles";
+cout << "2. Algebra\n";
+cin >> mode;
+if (mode == "circles" || mode == "1"){
+  cout << "What formula would you like to use?\n";
+  cout << "1. πr^2\n";
+  cout << "2. πd\n";
+  if (mode == "1" || mode == "πr^2"){
+    cout << "What is the radius of the circle?\n";
+    cin >> number;
+    ans = M_PI * number * number;
+    cout << "The area of the circle is " << ans << "\n";
+  }
+  else if (mode == "2" || mode == "πd"){
+    cout << "What is the diameter of the circle?\n";
+    cin >> number;
+    ans = M_PI * number;
+    cout << "The circomference of the circle is " << ans << "\n";
+  }
+  else{
+    cout << "Error: Invalid input.";
+  }
+}
+}
+
 int main() {
   double number = 10; //declares number as ten stored as real
   double number2; //declares number2 as a real
@@ -95,12 +122,16 @@ int main() {
   cout << "What mode do you want to use?\n";
   cout << "1. Basic maths (+,-,x,÷)\n";
   cout << "2. Powers & roots\n";
+  cout << "3. Formulas";
   cin >> mode;
   if (mode == "1" || mode == "basic maths\n"){
     basic(number, calc, number2, ans);
   }
   else if (mode == "2"){
     port(calc, number, number2, ans);
+  }
+  else if (calc == "3" || calc == "formulas"){
+    func(mode, number, ans);
   }
   else{
     cout << "Error: Invalid input\n";
