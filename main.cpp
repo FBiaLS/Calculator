@@ -84,7 +84,7 @@ int main() {
   string mode;
 
   cout << "Welcome to the best C++ calculator, designed for efficiency and simplicity.\n"; //prints welcome message
-  cout << "What mode do you want to use?";
+  cout << "What mode do you want to use?\n";
   cout << "1. Basic maths (+,-,x,÷)\n";
   cout << "2. Powers & roots\n";
   cin >> mode;
