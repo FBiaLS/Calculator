@@ -76,7 +76,7 @@ else if (calc == "roots" || calc == "root"){
   cout << "What number do you want to find the square root of?\n";
   cin >> number;
   ans = sqrt(number);
-  cout << "The square root of " << number << "is " << ans << "\n";
+  cout << "The square root of " << number << " is " << ans << "\n";
 }
 else{
   cout << "Error: Invalid input.\n";
