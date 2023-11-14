@@ -28,17 +28,10 @@ double divide(double number, double number2, double ans){ //defines function div
   cout << number << "÷" << number2 << "=" << ans << "\n"; //print
 }
 
-int main() {
-  double number = 10; //declares number as ten stored as real
-  double number2; //declares number2 as a real
-  double ans; //declares ans as a real
-  string calc; //declares calc as a string
-  double count = 0; //declares count as a real
-
-  cout << "Welcome to the best C++ calculator, designed for efficiency and simplicity.\n"; //prints welcome message
+string basic(double number, string calc, double number2, double ans){
   cout << "Enter the first number for your calculation\n"; //print
   cin >> number; //input for number
-  cout << "Would you like to add, subtract, multiply, divide or use powers?\n"; //print
+  cout << "Would you like to add, subtract, multiply or divide?\n"; //print
   cin >> calc; //input for calc
 
   if (calc == "add" || calc == "plus" || calc == "+"){ //if calc is add
@@ -64,8 +57,47 @@ int main() {
     cout << number << " to the power of " << number2 << " = " << ans << "\n"; //print
   }
   else{
-    cout << "Error: Invalid Input\n"; //print
+    cout << "Error: Invalid input\n"; //print
   }
+}
+
+string port(string calc, double number, double number2, double ans){
+cout << "Enter the first number for your calculation\n"; //print
+  cin >> number; //input for number
+if (calc == "powers" || calc == "power" || calc == "use powers" || calc == "^"){
+  cout << "What would you like to do " << number << " to the power of?\n"; //print
+  cin >> number2; //input for number2
+  ans = pow(number, number2);
+  cout << number << " to the power of " << number2 << " = " << ans << "\n"; //print
+  }
+else{
+  cout << "Error: Invalid input.\n";
+}
+}
+
+int main() {
+  double number = 10; //declares number as ten stored as real
+  double number2; //declares number2 as a real
+  double ans; //declares ans as a real
+  string calc; //declares calc as a string
+  double count = 0; //declares count as a real
+  string mode;
+
+  cout << "Welcome to the best C++ calculator, designed for efficiency and simplicity.\n"; //prints welcome message
+  cout << "What mode do you want to use?";
+  cout << "1. Basic maths (+,-,x,÷)\n";
+  cout << "2. Powers & roots\n";
+  cin >> mode;
+  if (mode == "1" || mode == "basic maths\n"){
+    basic(number, calc, number2, ans);
+  }
+  else if (mode == "2"){
+    port(calc, number, number2, ans);
+  }
+  else{
+    cout << "Error: Invalid input\n";
+  }
+
   cout << "Thank you for using the best C++ calculator, designed for efficiency and simplicity.\n"; //print
 
   return 0;
