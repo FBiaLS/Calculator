@@ -28,6 +28,16 @@ double divide(double number, double number2, double ans){ //defines function div
   cout << number << "÷" << number2 << "=" << ans << "\n"; //print
 }
 
+double areac(double number, double ans){
+  ans = M_PI * number * number;
+  cout << "The area of the circle is " << ans << "\n";
+}
+
+double circo(double number, double ans){
+  ans = M_PI * number;
+  cout << "The circomference of the circle is " << ans << "\n";
+}
+
 string basic(double number, string calc, double number2, double ans){
   cout << "Enter the first number for your calculation\n"; //print
   cin >> number; //input for number
@@ -96,14 +106,12 @@ if (mode == "circles" || mode == "1"){
   if (mode == "1" || mode == "πr^2"){
     cout << "What is the radius of the circle?\n";
     cin >> number;
-    ans = M_PI * number * number;
-    cout << "The area of the circle is " << ans << "\n";
+    areac(number, ans);
   }
   else if (mode == "2" || mode == "πd"){
     cout << "What is the diameter of the circle?\n";
     cin >> number;
-    ans = M_PI * number;
-    cout << "The circomference of the circle is " << ans << "\n";
+    circo(number, ans);
   }
   else{
     cout << "Error: Invalid input.";
