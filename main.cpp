@@ -130,7 +130,7 @@ int main() {
   else if (mode == "2"){
     port(calc, number, number2, ans);
   }
-  else if (calc == "3" || calc == "formulas"){
+  else if (mode == "3" || mode == "formulas"){
     func(mode, number, ans);
   }
   else{
