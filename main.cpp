@@ -85,13 +85,14 @@ else{
 
 string func(string mode, double number, double ans){
 cout << "What type of formula do you want to use?\n";
-cout << "1. Circles";
+cout << "1. Circles\n";
 cout << "2. Algebra\n";
 cin >> mode;
 if (mode == "circles" || mode == "1"){
   cout << "What formula would you like to use?\n";
   cout << "1. πr^2\n";
   cout << "2. πd\n";
+  cin >> mode;
   if (mode == "1" || mode == "πr^2"){
     cout << "What is the radius of the circle?\n";
     cin >> number;
