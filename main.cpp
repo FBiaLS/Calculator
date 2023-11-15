@@ -122,7 +122,7 @@ int main() {
   cout << "What mode do you want to use?\n";
   cout << "1. Basic maths (+,-,x,÷)\n";
   cout << "2. Powers & roots\n";
-  cout << "3. Formulas";
+  cout << "3. Formulas\n";
   cin >> mode;
   if (mode == "1" || mode == "basic maths\n"){
     basic(number, calc, number2, ans);
