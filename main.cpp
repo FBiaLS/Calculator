@@ -116,6 +116,18 @@ if (mode == "circles" || mode == "1"){
   else{
     cout << "Error: Invalid input.";
   }
+else if (mode == "algebra" || mode == "2"){
+  cout << "What formula would you like to use?\n";
+  cout << "1. The Quadratic formula\n"
+  cin >> mode;
+  if (mode == "1"){
+    cout << "What is the value of a?\n";
+    cin >> number;
+    cout << "What is the value of b?\n";
+    cin >> number2
+    cout << "What is the value of c?\n"
+  }
+}
 }
 }
 
