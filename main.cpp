@@ -58,7 +58,7 @@ double modec(string mode, double number, double ans){
   }
 }
 
-double quad(double number2, double number3, double ans2){
+double quad(double number, double number2, double number3, double ans, double ans2){
   cout << "What is the value of a?\n";
     cin >> number;
     cout << "What is the value of b?\n";
@@ -128,22 +128,22 @@ else{
 }
 
 string func(string mode, double number, double ans){
-cout << "What type of formula do you want to use?\n";
-cout << "1. Circles\n";
-cout << "2. Algebra\n";
-cin >> mode;
-if (mode == "circles" || mode == "1"){
-  modec(mode, number);
-}
-else if (mode == "algebra" || mode == "2"){
-  cout << "What formula would you like to use?\n";
-  cout << "1. The Quadratic formula\n";
+  cout << "What type of formula do you want to use?\n";
+  cout << "1. Circles\n";
+  cout << "2. Algebra\n";
   cin >> mode;
-}
-  if (mode == "1"){
-    quad(number2, number3, ans2);
+  if (mode == "circles" || mode == "1"){
+    modec(mode, number);
   }
-}
+  else if (mode == "algebra" || mode == "2"){
+    cout << "What formula would you like to use?\n";
+    cout << "1. The Quadratic formula\n";
+    cin >> mode;
+  }
+    if (mode == "1"){
+      quad(number2, number3, ans2);
+    }
+  }
 
 int main() {
   double number; //declares number as ten stored as real
