@@ -141,7 +141,7 @@ string func(string mode, double number, double ans){
     cin >> mode;
   }
     if (mode == "1"){
-      quad(number2, number3, ans2);
+      quad(number, number2, number3, ans, ans2);
     }
   }
 
