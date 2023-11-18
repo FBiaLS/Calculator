@@ -111,25 +111,25 @@ string basic(double number, string calc, double number2, double ans){
 }
 
 string port(string calc, double number, double number2, double ans){
-cout << "Would you like to use powers or roots?\n";
-cin >> calc;
-if (calc == "powers" || calc == "power" || calc == "use powers" || calc == "^"){
-  cout << "Enter the first number for your calculation\n"; //print
-  cin >> number; //input for number
-  cout << "What would you like to do " << number << " to the power of?\n"; //print
-  cin >> number2; //input for number2
-  ans = pow(number, number2);
-  cout << number << " to the power of " << number2 << " = " << ans << "\n"; //print
+  cout << "Would you like to use powers or roots?\n";
+  cin >> calc;
+  if (calc == "powers" || calc == "power" || calc == "use powers" || calc == "^"){
+    cout << "Enter the first number for your calculation\n"; //print
+    cin >> number; //input for number
+    cout << "What would you like to do " << number << " to the power of?\n"; //print
+    cin >> number2; //input for number2
+    ans = pow(number, number2);
+    cout << number << " to the power of " << number2 << " = " << ans << "\n"; //print
+    }
+  else if (calc == "roots" || calc == "root"){
+    cout << "What number do you want to find the square root of?\n";
+    cin >> number;
+    ans = sqrt(number);
+    cout << "The square root of " << number << " is " << ans << "\n";
   }
-else if (calc == "roots" || calc == "root"){
-  cout << "What number do you want to find the square root of?\n";
-  cin >> number;
-  ans = sqrt(number);
-  cout << "The square root of " << number << " is " << ans << "\n";
-}
-else{
-  cout << "Error: Invalid input.\n";
-}
+  else{
+    cout << "Error: Invalid input.\n";
+  }
 }
 
 string func(string mode, double number, double number2, double number3, double ans, double ans2){
@@ -151,7 +151,8 @@ string func(string mode, double number, double number2, double number3, double a
   else{
     cout << "Error: Invalid input\n";
   }
-  }
+}
+
 string func(string mode, double number, double number2, double number3, double ans, double ans2){
   cout << "What type of formula do you want to use?\n";
   cout << "1. Circles\n";
