@@ -213,8 +213,6 @@ int main() {
   else{
     cout << "Error: Invalid input\n";
   }
-
   cout << "Thank you for using the best C++ calculator, designed for efficiency and simplicity.\n"; //print
-
   return 0;
 }
