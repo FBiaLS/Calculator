@@ -181,6 +181,7 @@ string trig(string mode){
   cout << "3. tangent\n";
   cin >> mode;
 }
+
 int main() {
   double number; //declares number as ten stored as real
   double number2; //declares number2 as a real
