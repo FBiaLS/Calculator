@@ -173,9 +173,7 @@ string func(string mode, double number, double number2, double number3, double a
     cout << "Error: Invalid input\n";
   }
   }
-
-
-
+  
 int main() {
   double number; //declares number as ten stored as real
   double number2; //declares number2 as a real
