@@ -133,7 +133,7 @@ string func(string mode, double number, double number2, double number3, double a
   cout << "2. Algebra\n";
   cin >> mode;
   if (mode == "circles" || mode == "1"){
-    modec(mode, number);
+    modec(mode, number, ans);
   }
   else if (mode == "algebra" || mode == "2"){
     cout << "What formula would you like to use?\n";
@@ -168,7 +168,7 @@ int main() {
     port(calc, number, number2, ans);
   }
   else if (mode == "3" || mode == "formulas"){
-    func(mode, number, ans);
+    func(mode, number, number2, number3, ans, ans2);
   }
   else{
     cout << "Error: Invalid input\n";
