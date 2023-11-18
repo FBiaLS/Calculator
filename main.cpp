@@ -38,7 +38,7 @@ double circo(double number, double ans){
   cout << "The circomference of the circle is " << ans << "\n";
 }
 
-double modec(string mode, double number){
+double modec(string mode, double number, double ans){
   cout << "What formula would you like to use?\n";
   cout << "1. πr^2\n";
   cout << "2. πd\n";
@@ -62,14 +62,14 @@ double quad(double number, double number2, double number3, double ans, double an
   cout << "What is the value of a?\n";
     cin >> number;
     cout << "What is the value of b?\n";
-    cin >> number2
-    cout << "What is the value of c?\n"
+    cin >> number2;
+    cout << "What is the value of c?\n";
     cin >> number3;
-    ans = (number2 * -1) + sqrt(pow(number2, 2) - 4 * number * number3)
-    ans = ans / 2 * number
-    ans2 = (number2 * -1) - sqrt(pow(number2, 2) - 4 * number * number3)
-    ans2 = ans2 / 2 * number
-    cout << "The two values for x are " << ans2 << " and " << ans << "\n"
+    ans = (number2 * -1) + sqrt(pow(number2, 2) - 4 * number * number3);
+    ans = ans / 2 * number;
+    ans2 = (number2 * -1) - sqrt(pow(number2, 2) - 4 * number * number3);
+    ans2 = ans2 / 2 * number;
+    cout << "The two values for x are " << ans2 << " and " << ans << "\n";
 }
 
 string basic(double number, string calc, double number2, double ans){
@@ -134,15 +134,15 @@ cout << "2. Algebra\n";
 cin >> mode;
 if (mode == "circles" || mode == "1"){
   modec(mode, number);
+}
 else if (mode == "algebra" || mode == "2"){
   cout << "What formula would you like to use?\n";
-  cout << "1. The Quadratic formula\n"
+  cout << "1. The Quadratic formula\n";
   cin >> mode;
+}
   if (mode == "1"){
     quad(number, number2, number3, ans, ans2);
   }
-}
-}
 }
 
 int main() {
