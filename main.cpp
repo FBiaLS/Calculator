@@ -153,27 +153,6 @@ string func(string mode, double number, double number2, double number3, double a
   }
 }
 
-string func(string mode, double number, double number2, double number3, double ans, double ans2){
-  cout << "What type of formula do you want to use?\n";
-  cout << "1. Circles\n";
-  cout << "2. Algebra\n";
-  cin >> mode;
-  if (mode == "circles" || mode == "1"){
-    modec(mode, number, ans);
-  }
-  else if (mode == "algebra" || mode == "2"){
-    cout << "What formula would you like to use?\n";
-    cout << "1. The Quadratic formula\n";
-    cin >> mode;
-  }
-    if (mode == "1"){
-      quad(number, number2, number3, ans, ans2);
-    }
-  else{
-    cout << "Error: Invalid input\n";
-  }
-}
-
 string trig(string mode){
   cout << "Which trig function would you like to use?\n";
   cout << "1. sin\n";
