@@ -172,8 +172,15 @@ string func(string mode, double number, double number2, double number3, double a
   else{
     cout << "Error: Invalid input\n";
   }
-  }
-  
+}
+
+string trig(string mode){
+  cout << "Which trig function would you like to use?\n";
+  cout << "1. sin\n";
+  cout << "2. cosine\n";
+  cout << "3. tangent\n";
+  cin >> mode;
+}
 int main() {
   double number; //declares number as ten stored as real
   double number2; //declares number2 as a real
@@ -201,7 +208,7 @@ int main() {
     func(mode, number, number2, number3, ans, ans2);
   }
   else if (mode == "4" || mode == "triganometry" || mode "trig"){
-    trig();
+    trig(mode);
   }
   else{
     cout << "Error: Invalid input\n";
