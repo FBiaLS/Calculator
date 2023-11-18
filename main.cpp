@@ -69,7 +69,12 @@ double quad(double number, double number2, double number3, double ans, double an
     ans = ans / 2 * number;
     ans2 = (number2 * -1) - sqrt(pow(number2, 2) - 4 * number * number3);
     ans2 = ans2 / 2 * number;
-    cout << "The two values for x are " << ans2 << " and " << ans << "\n";
+    if (ans == ans2){
+      cout << "x = " << ans << "\n";
+    }
+    else{
+      cout << "The two values for x are " << ans2 << " and " << ans << "\n";
+    }
 }
 
 string basic(double number, string calc, double number2, double ans){
@@ -143,6 +148,9 @@ string func(string mode, double number, double number2, double number3, double a
     if (mode == "1"){
       quad(number, number2, number3, ans, ans2);
     }
+  else{
+    cout << "Error: Invalid input\n";
+  }
   }
 
 int main() {
