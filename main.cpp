@@ -58,7 +58,7 @@ double modec(string mode, double number, double ans){
   }
 }
 
-double quad(double number, double number2, double number3, double ans, double ans2){
+double quad(double number2, double number3, double ans2){
   cout << "What is the value of a?\n";
     cin >> number;
     cout << "What is the value of b?\n";
@@ -141,7 +141,7 @@ else if (mode == "algebra" || mode == "2"){
   cin >> mode;
 }
   if (mode == "1"){
-    quad(number, number2, number3, ans, ans2);
+    quad(number2, number3, ans2);
   }
 }
 
