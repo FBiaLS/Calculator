@@ -127,7 +127,7 @@ else{
 }
 }
 
-string func(string mode, double number, double ans){
+string func(string mode, double number, double number2, double number3, double ans, double ans2){
   cout << "What type of formula do you want to use?\n";
   cout << "1. Circles\n";
   cout << "2. Algebra\n";
