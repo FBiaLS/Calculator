@@ -38,6 +38,40 @@ double circo(double number, double ans){
   cout << "The circomference of the circle is " << ans << "\n";
 }
 
+double modec(string mode, double number){
+  cout << "What formula would you like to use?\n";
+  cout << "1. πr^2\n";
+  cout << "2. πd\n";
+  cin >> mode;
+  if (mode == "1" || mode == "πr^2"){
+    cout << "What is the radius of the circle?\n";
+    cin >> number;
+    areac(number, ans);
+  }
+  else if (mode == "2" || mode == "πd"){
+    cout << "What is the diameter of the circle?\n";
+    cin >> number;
+    circo(number, ans);
+  }
+  else{
+    cout << "Error: Invalid input.";
+  }
+}
+
+double quad(double number, double number2, double number3, double ans, double ans2){
+  cout << "What is the value of a?\n";
+    cin >> number;
+    cout << "What is the value of b?\n";
+    cin >> number2
+    cout << "What is the value of c?\n"
+    cin >> number3;
+    ans = (number2 * -1) + sqrt(pow(number2, 2) - 4 * number * number3)
+    ans = ans / 2 * number
+    ans2 = (number2 * -1) - sqrt(pow(number2, 2) - 4 * number * number3)
+    ans2 = ans2 / 2 * number
+    cout << "The two values for x are " << ans2 << " and " << ans << "\n"
+}
+
 string basic(double number, string calc, double number2, double ans){
   cout << "Enter the first number for your calculation\n"; //print
   cin >> number; //input for number
@@ -99,45 +133,27 @@ cout << "1. Circles\n";
 cout << "2. Algebra\n";
 cin >> mode;
 if (mode == "circles" || mode == "1"){
-  cout << "What formula would you like to use?\n";
-  cout << "1. πr^2\n";
-  cout << "2. πd\n";
-  cin >> mode;
-  if (mode == "1" || mode == "πr^2"){
-    cout << "What is the radius of the circle?\n";
-    cin >> number;
-    areac(number, ans);
-  }
-  else if (mode == "2" || mode == "πd"){
-    cout << "What is the diameter of the circle?\n";
-    cin >> number;
-    circo(number, ans);
-  }
-  else{
-    cout << "Error: Invalid input.";
-  }
+  modec(mode, number);
 else if (mode == "algebra" || mode == "2"){
   cout << "What formula would you like to use?\n";
   cout << "1. The Quadratic formula\n"
   cin >> mode;
   if (mode == "1"){
-    cout << "What is the value of a?\n";
-    cin >> number;
-    cout << "What is the value of b?\n";
-    cin >> number2
-    cout << "What is the value of c?\n"
+    quad(number, number2, number3, ans, ans2);
   }
 }
 }
 }
 
 int main() {
-  double number = 10; //declares number as ten stored as real
+  double number; //declares number as ten stored as real
   double number2; //declares number2 as a real
+  double number3;
   double ans; //declares ans as a real
   string calc; //declares calc as a string
   double count = 0; //declares count as a real
   string mode;
+  double ans2;
 
   cout << "Welcome to the best C++ calculator, designed for efficiency and simplicity.\n"; //prints welcome message
   cout << "What mode do you want to use?\n";
