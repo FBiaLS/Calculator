@@ -153,6 +153,29 @@ string func(string mode, double number, double number2, double number3, double a
   }
   }
 
+string func(string mode, double number, double number2, double number3, double ans, double ans2){
+  cout << "What type of formula do you want to use?\n";
+  cout << "1. Circles\n";
+  cout << "2. Algebra\n";
+  cin >> mode;
+  if (mode == "circles" || mode == "1"){
+    modec(mode, number, ans);
+  }
+  else if (mode == "algebra" || mode == "2"){
+    cout << "What formula would you like to use?\n";
+    cout << "1. The Quadratic formula\n";
+    cin >> mode;
+  }
+    if (mode == "1"){
+      quad(number, number2, number3, ans, ans2);
+    }
+  else{
+    cout << "Error: Invalid input\n";
+  }
+  }
+
+
+
 int main() {
   double number; //declares number as ten stored as real
   double number2; //declares number2 as a real
@@ -168,6 +191,7 @@ int main() {
   cout << "1. Basic maths (+,-,x,÷)\n";
   cout << "2. Powers & roots\n";
   cout << "3. Formulas\n";
+  cout << "4. Triganometry\n";
   cin >> mode;
   if (mode == "1" || mode == "basic maths\n"){
     basic(number, calc, number2, ans);
@@ -177,6 +201,9 @@ int main() {
   }
   else if (mode == "3" || mode == "formulas"){
     func(mode, number, number2, number3, ans, ans2);
+  }
+  else if (mode == "4" || mode == "triganometry" || mode "trig"){
+    trig();
   }
   else{
     cout << "Error: Invalid input\n";
