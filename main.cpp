@@ -207,7 +207,7 @@ int main() {
   else if (mode == "3" || mode == "formulas"){
     func(mode, number, number2, number3, ans, ans2);
   }
-  else if (mode == "4" || mode == "triganometry" || mode "trig"){
+  else if (mode == "4" || mode == "triganometry" || mode == "trig"){
     trig(mode);
   }
   else{
