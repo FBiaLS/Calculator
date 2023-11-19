@@ -77,6 +77,119 @@ double quad(double number, double number2, double number3, double ans, double an
     }
 }
 
+double sine(double number, double ans){
+  cout << "What value of sin would you like to find?\n";
+  cin >> number;
+  ans = sin(number);
+  cout << "sin(" << number << ") = " << ans << "\n";
+}
+
+double cosine(double number, double ans){
+  cout << "What value of cosine would you like to find?\n";
+  cin >> number;
+  ans = cos(number);
+  cout << "cos(" << number << ") = " << ans << "\n";
+}
+
+double tangent(double number, double ans){
+  cout << "What value of tan would you like to find?\n";
+  cin >> number;
+  ans = tan(number);
+  cout << "tan(" << number << ") = " << ans << "\n";
+}
+
+double soh(double number, double number2, double number3, double ans){
+  cout << "What is the size of the angle? [if you do not have a value input 'x']\n";
+  cin >> number;
+  cout << "What is the length of the opposite side? [if you do not have a value input 'x']\n";
+  cin >> number2;
+  cout << "What is the length of the hypotenuse? [if you do not have a value input 'x']\n";
+  cin >> number3;
+  if (number == "x"){
+    ans = asin(number2 / number3);
+    cout << "The size of the angle is " << ans << "°/n";
+  }
+  else if (number2 == "x"){
+    ans = sin(number) * number3;
+    cout << "The length of the opposite side is " << ans << "°\n";
+  }
+  else if (number3 == "x"){
+    ans = number2 / sin(number);
+    cout << "The length of the hypotenuse is " << ans << "°\n";
+  }
+  else{
+    cout << "Error: Invalid input\n";
+  }
+}
+
+double cah(double number, double number2, double number3, double ans){
+  cout << "What is the size of the angle? [if you do not have a value input 'x']\n";
+  cin >> number;
+  cout << "What is the length of the adjacent side? [if you do not have a value input 'x']\n";
+  cin >> number2;
+  cout << "What is the length of the hypotenuse? [if you do not have a value input 'x']\n";
+  cin >> number3;
+  if (number == "x"){
+    ans = asin(number2 / number3);
+    cout << "The size of the angle is " << ans << "°/n";
+  }
+  else if (number2 == "x"){
+    ans = sin(number) * number3;
+    cout << "The length of the adjacent side is " << ans << "°\n";
+  }
+  else if (number3 == "x"){
+    ans = number2 / sin(number);
+    cout << "The length of the hypotenuse is " << ans << "°\n";
+  }
+  else{
+    cout << "Error: Invalid input\n";
+  }
+}
+
+double toa(double number, double number2, double number3, double ans){
+  cout << "What is the size of the angle? [if you do not have a value input 'x']\n";
+  cin >> number;
+  cout << "What is the length of the opposite side? [if you do not have a value input 'x']\n";
+  cin >> number2;
+  cout << "What is the length of the adjacent side? [if you do not have a value input 'x']\n";
+  cin >> number3;
+  if (number == "x"){
+    ans = asin(number2 / number3);
+    cout << "The size of the angle is " << ans << "°/n";
+  }
+  else if (number2 == "x"){
+    ans = sin(number) * number3;
+    cout << "The length of the adjacent side is " << ans << "°\n";
+  }
+  else if (number3 == "x"){
+    ans = number2 / sin(number);
+    cout << "The length of the hypotenuse is " << ans << "°\n";
+  }
+  else{
+    cout << "Error: Invalid input\n";
+  }
+}
+
+double sct(string mode, double nuber, double number2, double number3, double ans){
+  cout << "Which trig function would you like to use?\n";
+  cout << "1. sine\n";
+  cout << "2. cosine\n";
+  cout << "3. tangent\n";
+  cin >> mode;
+  if (mode == "1" || mode == "sin"){
+    soh(number, number2, number3, ans);
+  }
+  else if (mode == "2" || mode == "cos" || mode == "cosine"){
+    cah(number, number2, number3, ans);
+  }
+  else if (mode "3" || mode == "tan" || mode == "tangent"){
+    toa(number, number2, number3, ans);
+  }
+  else{
+    cout << "Error: Invalid input\n"
+  }
+}
+
 string basic(double number, string calc, double number2, double ans){
   cout << "Enter the first number for your calculation\n"; //print
   cin >> number; //input for number
@@ -153,12 +266,32 @@ string func(string mode, double number, double number2, double number3, double a
   }
 }
 
-string trig(string mode){
+string trig(string mode, double number, double number2, double number3, double ans){
   cout << "Which trig function would you like to use?\n";
-  cout << "1. sin\n";
+  cout << "1. sine\n";
   cout << "2. cosine\n";
   cout << "3. tangent\n";
+  cout << "4. SOH CAH TOA\n";
+  cout << "5. trig equations\n";
   cin >> mode;
+  if (mode == "1" || mode == "sin"){
+    sine(number, ans);
+  }
+  else if (mode == "2" || mode == "cos" || mode == "cosine"){
+    cosine(number, ans);
+  }
+  else if (mode "3" || mode == "tan" || mode == "tangent"){
+    tangent(number, ans)
+  }
+  else if (mode == "4"){
+    sct(mode, number, number2, number3, ans);
+  }
+  else if (mode == "5"){
+    //placeholder
+  }
+  else{
+    cout << "Error: Invalid input\n";
+  }
 }
 
 int main() {
@@ -188,7 +321,7 @@ int main() {
     func(mode, number, number2, number3, ans, ans2);
   }
   else if (mode == "4" || mode == "triganometry" || mode == "trig"){
-    trig(mode);
+    trig(mode, number, number2, number3, ans);
   }
   else{
     cout << "Error: Invalid input\n";
