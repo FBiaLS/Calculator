@@ -186,7 +186,7 @@ double sct(string mode, double nuber, double number2, double number3, double ans
     toa(number, number2, number3, ans);
   }
   else{
-    cout << "Error: Invalid input\n"
+    cout << "Error: Invalid input\n";
   }
 }
 
@@ -281,7 +281,7 @@ string trig(string mode, double number, double number2, double number3, double a
     cosine(number, ans);
   }
   else if (mode "3" || mode == "tan" || mode == "tangent"){
-    tangent(number, ans)
+    tangent(number, ans);
   }
   else if (mode == "4"){
     sct(mode, number, number2, number3, ans);
