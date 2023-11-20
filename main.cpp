@@ -170,7 +170,7 @@ double toa(double number, double number2, double number3, double ans){
   }
 }
 
-double sct(string mode, double nuber, double number2, double number3, double ans){
+double sct(string mode, double number, double number2, double number3, double ans){
   cout << "Which trig function would you like to use?\n";
   cout << "1. sine\n";
   cout << "2. cosine\n";
