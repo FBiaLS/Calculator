@@ -107,15 +107,15 @@ double soh(double number, double number2, double number3, double ans){
   cin >> number3;
   if (number == -1){
     ans = asin(number2 / number3);
-    cout << "The size of the angle is " << ans << "°/n";
+    cout << "The size of the angle is " << ans << "º/n";
   }
   else if (number2 == -1){
     ans = sin(number) * number3;
-    cout << "The length of the opposite side is " << ans << "°\n";
+    cout << "The length of the opposite side is " << ans << "º\n";
   }
   else if (number3 == -1){
     ans = number2 / sin(number);
-    cout << "The length of the hypotenuse is " << ans << "°\n";
+    cout << "The length of the hypotenuse is " << ans << "º\n";
   }
   else{
     cout << "Error: Invalid input\n";
@@ -131,15 +131,15 @@ double cah(double number, double number2, double number3, double ans){
   cin >> number3;
   if (number == -1){
     ans = asin(number2 / number3);
-    cout << "The size of the angle is " << ans << "°/n";
+    cout << "The size of the angle is " << ans << "º/n";
   }
   else if (number2 == -1){
     ans = sin(number) * number3;
-    cout << "The length of the adjacent side is " << ans << "°\n";
+    cout << "The length of the adjacent side is " << ans << "º\n";
   }
   else if (number3 == -1){
     ans = number2 / sin(number);
-    cout << "The length of the hypotenuse is " << ans << "°\n";
+    cout << "The length of the hypotenuse is " << ans << "º\n";
   }
   else{
     cout << "Error: Invalid input\n";
@@ -155,15 +155,15 @@ double toa(double number, double number2, double number3, double ans){
   cin >> number3;
   if (number == -1){
     ans = asin(number2 / number3);
-    cout << "The size of the angle is " << ans << "°/n";
+    cout << "The size of the angle is " << ans << "º/n";
   }
   else if (number2 == -1){
     ans = sin(number) * number3;
-    cout << "The length of the adjacent side is " << ans << "°\n";
+    cout << "The length of the adjacent side is " << ans << "º\n";
   }
   else if (number3 == -1){
     ans = number2 / sin(number);
-    cout << "The length of the hypotenuse is " << ans << "°\n";
+    cout << "The length of the hypotenuse is " << ans << "º\n";
   }
   else{
     cout << "Error: Invalid input\n";
