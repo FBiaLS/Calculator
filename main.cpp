@@ -105,15 +105,15 @@ double soh(double number, double number2, double number3, double ans){
   cin >> number2;
   cout << "What is the length of the hypotenuse? [if you do not have a value input '-1']\n";
   cin >> number3;
-  if (number == "x"){
+  if (number == -1){
     ans = asin(number2 / number3);
     cout << "The size of the angle is " << ans << "°/n";
   }
-  else if (number2 == "x"){
+  else if (number2 == -1){
     ans = sin(number) * number3;
     cout << "The length of the opposite side is " << ans << "°\n";
   }
-  else if (number3 == "x"){
+  else if (number3 == -1){
     ans = number2 / sin(number);
     cout << "The length of the hypotenuse is " << ans << "°\n";
   }
@@ -129,15 +129,15 @@ double cah(double number, double number2, double number3, double ans){
   cin >> number2;
   cout << "What is the length of the hypotenuse? [if you do not have a value input '-1']\n";
   cin >> number3;
-  if (number == "x"){
+  if (number == -1){
     ans = asin(number2 / number3);
     cout << "The size of the angle is " << ans << "°/n";
   }
-  else if (number2 == "x"){
+  else if (number2 == -1){
     ans = sin(number) * number3;
     cout << "The length of the adjacent side is " << ans << "°\n";
   }
-  else if (number3 == "x"){
+  else if (number3 == -1){
     ans = number2 / sin(number);
     cout << "The length of the hypotenuse is " << ans << "°\n";
   }
@@ -153,15 +153,15 @@ double toa(double number, double number2, double number3, double ans){
   cin >> number2;
   cout << "What is the length of the adjacent side? [if you do not have a value input '-1']\n";
   cin >> number3;
-  if (number == "x"){
+  if (number == -1){
     ans = asin(number2 / number3);
     cout << "The size of the angle is " << ans << "°/n";
   }
-  else if (number2 == "x"){
+  else if (number2 == -1){
     ans = sin(number) * number3;
     cout << "The length of the adjacent side is " << ans << "°\n";
   }
-  else if (number3 == "x"){
+  else if (number3 == -1){
     ans = number2 / sin(number);
     cout << "The length of the hypotenuse is " << ans << "°\n";
   }
