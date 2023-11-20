@@ -20,7 +20,7 @@ double subtract(double number, double number2, double ans){ //defines function s
 
 double multiply(double number, double number2, double ans){ //defines function multiply as string containing listed varaibles
   ans = number * number2; //multiply number and number2
-  cout << number << "x" << number2 << "=" << ans << "\n"; //print
+  cout << number << "-1" << number2 << "=" << ans << "\n"; //print
 }
 
 double divide(double number, double number2, double ans){ //defines function divide as string containing listed varaibles
@@ -70,10 +70,10 @@ double quad(double number, double number2, double number3, double ans, double an
     ans2 = (number2 * -1) - sqrt(pow(number2, 2) - 4 * number * number3);
     ans2 = ans2 / 2 * number;
     if (ans == ans2){
-      cout << "x = " << ans << "\n";
+      cout << "-1 = " << ans << "\n";
     }
     else{
-      cout << "The two values for x are " << ans2 << " and " << ans << "\n";
+      cout << "The two values for -1 are " << ans2 << " and " << ans << "\n";
     }
 }
 
@@ -99,21 +99,21 @@ double tangent(double number, double ans){
 }
 
 double soh(double number, double number2, double number3, double ans){
-  cout << "What is the size of the angle? [if you do not have a value input 'x']\n";
+  cout << "What is the size of the angle? [if you do not have a value input '-1']\n";
   cin >> number;
-  cout << "What is the length of the opposite side? [if you do not have a value input 'x']\n";
+  cout << "What is the length of the opposite side? [if you do not have a value input '-1']\n";
   cin >> number2;
-  cout << "What is the length of the hypotenuse? [if you do not have a value input 'x']\n";
+  cout << "What is the length of the hypotenuse? [if you do not have a value input '-1']\n";
   cin >> number3;
-  if (number == "x"){
+  if (number == "-1"){
     ans = asin(number2 / number3);
     cout << "The size of the angle is " << ans << "°/n";
   }
-  else if (number2 == "x"){
+  else if (number2 == "-1"){
     ans = sin(number) * number3;
     cout << "The length of the opposite side is " << ans << "°\n";
   }
-  else if (number3 == "x"){
+  else if (number3 == "-1"){
     ans = number2 / sin(number);
     cout << "The length of the hypotenuse is " << ans << "°\n";
   }
@@ -123,21 +123,21 @@ double soh(double number, double number2, double number3, double ans){
 }
 
 double cah(double number, double number2, double number3, double ans){
-  cout << "What is the size of the angle? [if you do not have a value input 'x']\n";
+  cout << "What is the size of the angle? [if you do not have a value input '-1']\n";
   cin >> number;
-  cout << "What is the length of the adjacent side? [if you do not have a value input 'x']\n";
+  cout << "What is the length of the adjacent side? [if you do not have a value input '-1']\n";
   cin >> number2;
-  cout << "What is the length of the hypotenuse? [if you do not have a value input 'x']\n";
+  cout << "What is the length of the hypotenuse? [if you do not have a value input '-1']\n";
   cin >> number3;
-  if (number == "x"){
+  if (number == "-1"){
     ans = asin(number2 / number3);
     cout << "The size of the angle is " << ans << "°/n";
   }
-  else if (number2 == "x"){
+  else if (number2 == "-1"){
     ans = sin(number) * number3;
     cout << "The length of the adjacent side is " << ans << "°\n";
   }
-  else if (number3 == "x"){
+  else if (number3 == "-1"){
     ans = number2 / sin(number);
     cout << "The length of the hypotenuse is " << ans << "°\n";
   }
@@ -147,21 +147,21 @@ double cah(double number, double number2, double number3, double ans){
 }
 
 double toa(double number, double number2, double number3, double ans){
-  cout << "What is the size of the angle? [if you do not have a value input 'x']\n";
+  cout << "What is the size of the angle? [if you do not have a value input '-1']\n";
   cin >> number;
-  cout << "What is the length of the opposite side? [if you do not have a value input 'x']\n";
+  cout << "What is the length of the opposite side? [if you do not have a value input '-1']\n";
   cin >> number2;
-  cout << "What is the length of the adjacent side? [if you do not have a value input 'x']\n";
+  cout << "What is the length of the adjacent side? [if you do not have a value input '-1']\n";
   cin >> number3;
-  if (number == "x"){
+  if (number == "-1"){
     ans = asin(number2 / number3);
     cout << "The size of the angle is " << ans << "°/n";
   }
-  else if (number2 == "x"){
+  else if (number2 == "-1"){
     ans = sin(number) * number3;
     cout << "The length of the adjacent side is " << ans << "°\n";
   }
-  else if (number3 == "x"){
+  else if (number3 == "-1"){
     ans = number2 / sin(number);
     cout << "The length of the hypotenuse is " << ans << "°\n";
   }
@@ -204,7 +204,7 @@ string basic(double number, string calc, double number2, double ans){
     number2 = number2 = inp2(number2);
     subtract(number, number2, ans);
   }
-  else if (calc == "multiply" || calc == "times" || calc == "x"){ //if calc is multiply
+  else if (calc == "multiply" || calc == "times" || calc == "-1"){ //if calc is multiply
     number2 = inp2(number2);
     multiply(number, number2, ans);
   }
@@ -306,7 +306,7 @@ int main() {
 
   cout << "Welcome to the best C++ calculator, designed for efficiency and simplicity.\n"; //prints welcome message
   cout << "What mode do you want to use?\n";
-  cout << "1. Basic maths (+,-,x,÷)\n";
+  cout << "1. Basic maths (+,-,-1,÷)\n";
   cout << "2. Powers & roots\n";
   cout << "3. Formulas\n";
   cout << "4. Triganometry\n";
