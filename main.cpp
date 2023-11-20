@@ -135,7 +135,7 @@ double cah(double number, double number2, double number3, double ans){
   }
   else if (number2 == -1){
     ans = sin(number) * number3;
-    cout << "The length of the adjacent side is " << ans << "º\n";
+    cout << "The length of the adjacent side is " << ans << "º\n"
   }
   else if (number3 == -1){
     ans = number2 / sin(number);
