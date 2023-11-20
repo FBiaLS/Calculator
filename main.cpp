@@ -182,7 +182,7 @@ double sct(string mode, double number, double number2, double number3, double an
   else if (mode == "2" || mode == "cos" || mode == "cosine"){
     cah(number, number2, number3, ans);
   }
-  else if (mode "3" || mode == "tan" || mode == "tangent"){
+  else if (mode == "3" || mode == "tan" || mode == "tangent"){
     toa(number, number2, number3, ans);
   }
   else{
@@ -280,7 +280,7 @@ string trig(string mode, double number, double number2, double number3, double a
   else if (mode == "2" || mode == "cos" || mode == "cosine"){
     cosine(number, ans);
   }
-  else if (mode "3" || mode == "tan" || mode == "tangent"){
+  else if (mode == "3" || mode == "tan" || mode == "tangent"){
     tangent(number, ans);
   }
   else if (mode == "4"){
