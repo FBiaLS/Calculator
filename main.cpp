@@ -2,39 +2,39 @@
 #include <cmath>
 using namespace std;
 
-double inp2(double number2){
+double inp2(double number){
   cout << "Enter the second number for your calculation\n"; //print
-  cin >> number2; //input for number2
-  return number2;
+  cin >> number[1]; //input for number1
+  return number[1];
 }
 
-double add(double number, double number2, double ans){ //defines function add as string containing listed varaibles
-  ans = number + number2; //add number and number2
-  cout << number << "+" << number2 << "=" << ans << "\n"; //print
+double add(double number, double ans){ //defines function add as string containing listed varaibles
+  ans = number[0] + number[1]; //add number and number2
+  cout << number[0] << "+" << number[1] << "=" << ans << "\n"; //print
 }
 
-double subtract(double number, double number2, double ans){ //defines function subtract as string containing listed varaibles
-  ans = number - number2; //subtract number and number2
-  cout << number << "-" << number2 << "=" << ans << "\n"; //print
+double subtract(double number, double ans){ //defines function subtract as string containing listed varaibles
+  ans = number[0] - number[1]; //subtract number and number2
+  cout << number[0] << "-" << number[1] << "=" << ans << "\n"; //print
 }
 
-double multiply(double number, double number2, double ans){ //defines function multiply as string containing listed varaibles
-  ans = number * number2; //multiply number and number2
-  cout << number << "x" << number2 << "=" << ans << "\n"; //print
+double multiply(double number, double ans){ //defines function multiply as string containing listed varaibles
+  ans = number[0] * number[1]; //multiply number and number2
+  cout << number[0] << "x" << number[1] << "=" << ans << "\n"; //print
 }
 
-double divide(double number, double number2, double ans){ //defines function divide as string containing listed varaibles
-  ans = number / number2; //divide number and number2
-  cout << number << "÷" << number2 << "=" << ans << "\n"; //print
+double divide(double number, double ans){ //defines function divide as string containing listed varaibles
+  ans = number[0] / number[1]; //divide number and number2
+  cout << number[0] << "÷" << number[1] << "=" << ans << "\n"; //print
 }
 
 double areac(double number, double ans){
-  ans = M_PI * number * number;
+  ans = M_PI * number[0] * number[0];
   cout << "The area of the circle is " << ans << "\n";
 }
 
 double circo(double number, double ans){
-  ans = M_PI * number;
+  ans = M_PI * number[0];
   cout << "The circomference of the circle is " << ans << "\n";
 }
 
@@ -45,30 +45,30 @@ double modec(string mode, double number, double ans){
   cin >> mode;
   if (mode == "1" || mode == "πr^2"){
     cout << "What is the radius of the circle?\n";
-    cin >> number;
-    areac(number, ans);
+    cin >> number[0];
+    areac(number[0], ans);
   }
   else if (mode == "2" || mode == "πd"){
     cout << "What is the diameter of the circle?\n";
-    cin >> number;
-    circo(number, ans);
+    cin >> number[0];
+    circo(number[0], ans);
   }
   else{
     cout << "Error: Invalid input.";
   }
 }
 
-double quad(double number, double number2, double number3, double ans, double ans2){
+double quad(double number, double ans, double ans2){
   cout << "What is the value of a?\n";
-    cin >> number;
+    cin >> number[0];
     cout << "What is the value of b?\n";
-    cin >> number2;
+    cin >> number[1];
     cout << "What is the value of c?\n";
-    cin >> number3;
-    ans = (number2 * -1) + sqrt(pow(number2, 2) - 4 * number * number3);
-    ans = ans / 2 * number;
-    ans2 = (number2 * -1) - sqrt(pow(number2, 2) - 4 * number * number3);
-    ans2 = ans2 / 2 * number;
+    cin >> number[2];
+    ans = (number[1] * -1) + sqrt(pow(number[1], 2) - 4 * number[0] * number[2]);
+    ans = ans / 2 * number[0];
+    ans2 = (number[1] * -1) - sqrt(pow(number[1], 2) - 4 * number[0] * number[2]);
+    ans2 = ans2 / 2 * number[0];
     if (ans == ans2){
       cout << "-1 = " << ans << "\n";
     }
@@ -287,7 +287,7 @@ string trig(string mode, double number, double number2, double number3, double a
     sct(mode, number, number2, number3, ans);
   }
   else if (mode == "5"){
-    cout << "This bit hasn't been coded yet :(\n"
+    cout << "This bit hasn't been coded yet :(\n";
   }
   else{
     cout << "Error: Invalid input\n";
@@ -295,9 +295,7 @@ string trig(string mode, double number, double number2, double number3, double a
 }
 
 int main() {
-  double number; //declares number as ten stored as real
-  double number2; //declares number2 as a real
-  double number3;
+  double number[3] = {0, 2, 3}
   double ans; //declares ans as a real
   string calc; //declares calc as a string
   double count = 0; //declares count as a real
