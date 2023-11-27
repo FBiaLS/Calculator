@@ -287,7 +287,7 @@ string trig(string mode, double number, double number2, double number3, double a
     sct(mode, number, number2, number3, ans);
   }
   else if (mode == "5"){
-    //placeholder
+    cout << "This bit hasn't been coded yet :(\n"
   }
   else{
     cout << "Error: Invalid input\n";
