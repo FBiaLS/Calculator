@@ -295,7 +295,7 @@ string trig(string mode, double number, double ans){
 }
 
 int main() {
-  double number[3] = {0, 2, 3}
+  double number[3]
   double ans; //declares ans as a real
   string calc; //declares calc as a string
   double count = 0; //declares count as a real
