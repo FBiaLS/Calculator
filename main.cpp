@@ -79,42 +79,42 @@ double quad(double number, double ans, double ans2){
 
 double sine(double number, double ans){
   cout << "What value of sin would you like to find?\n";
-  cin >> number;
-  ans = sin(number);
-  cout << "sin(" << number << ") = " << ans << "\n";
+  cin >> number[0];
+  ans = sin(number[0]);
+  cout << "sin(" << number[0] << ") = " << ans << "\n";
 }
 
 double cosine(double number, double ans){
   cout << "What value of cosine would you like to find?\n";
-  cin >> number;
-  ans = cos(number);
-  cout << "cos(" << number << ") = " << ans << "\n";
+  cin >> number[0];
+  ans = cos(number[0]);
+  cout << "cos(" << number[0] << ") = " << ans << "\n";
 }
 
 double tangent(double number, double ans){
   cout << "What value of tan would you like to find?\n";
-  cin >> number;
-  ans = tan(number);
-  cout << "tan(" << number << ") = " << ans << "\n";
+  cin >> number[0];
+  ans = tan(number[0]);
+  cout << "tan(" << number[0] << ") = " << ans << "\n";
 }
 
-double soh(double number, double number2, double number3, double ans){
+double soh(double number, double ans){
   cout << "What is the size of the angle? [if you do not have a value input '-1']\n";
-  cin >> number;
+  cin >> number[0];
   cout << "What is the length of the opposite side? [if you do not have a value input '-1']\n";
-  cin >> number2;
+  cin >> number[1];
   cout << "What is the length of the hypotenuse? [if you do not have a value input '-1']\n";
-  cin >> number3;
-  if (number == -1){
-    ans = asin(number2 / number3);
+  cin >> number[2];
+  if (number[0] == -1){
+    ans = asin(number[1] / number[2]);
     cout << "The size of the angle is " << ans << "º/n";
   }
-  else if (number2 == -1){
-    ans = sin(number) * number3;
+  else if (number[1] == -1){
+    ans = sin(number[0]) * number[2];
     cout << "The length of the opposite side is " << ans << "º\n";
   }
-  else if (number3 == -1){
-    ans = number2 / sin(number);
+  else if (number[2] == -1){
+    ans = number[1] / sin(number[0]);
     cout << "The length of the hypotenuse is " << ans << "º\n";
   }
   else{
@@ -122,23 +122,23 @@ double soh(double number, double number2, double number3, double ans){
   }
 }
 
-double cah(double number, double number2, double number3, double ans){
+double cah(double number,double ans){
   cout << "What is the size of the angle? [if you do not have a value input '-1']\n";
-  cin >> number;
+  cin >> number[0];
   cout << "What is the length of the adjacent side? [if you do not have a value input '-1']\n";
-  cin >> number2;
+  cin >> number[1];
   cout << "What is the length of the hypotenuse? [if you do not have a value input '-1']\n";
-  cin >> number3;
-  if (number == -1){
-    ans = asin(number2 / number3);
+  cin >> number[2];
+  if (number[0] == -1){
+    ans = asin(number[1] / number[2]);
     cout << "The size of the angle is " << ans << "º/n";
   }
-  else if (number2 == -1){
-    ans = sin(number) * number3;
+  else if (number[1] == -1){
+    ans = sin(number[0]) * number[2];
     cout << "The length of the adjacent side is " << ans << char(248) << "\n";
   }
-  else if (number3 == -1){
-    ans = number2 / sin(number);
+  else if (number[2] == -1){
+    ans = number[1] / sin(number[0]);
     cout << "The length of the hypotenuse is " << ans << "º\n";
   }
   else{
@@ -146,23 +146,23 @@ double cah(double number, double number2, double number3, double ans){
   }
 }
 
-double toa(double number, double number2, double number3, double ans){
+double toa(double number, double ans){
   cout << "What is the size of the angle? [if you do not have a value input '-1']\n";
-  cin >> number;
+  cin >> number[0];
   cout << "What is the length of the opposite side? [if you do not have a value input '-1']\n";
-  cin >> number2;
+  cin >> number[1];
   cout << "What is the length of the adjacent side? [if you do not have a value input '-1']\n";
-  cin >> number3;
-  if (number == -1){
-    ans = asin(number2 / number3);
+  cin >> number[2];
+  if (number[0] == -1){
+    ans = asin(number[1] / number[2]);
     cout << "The size of the angle is " << ans << "º/n";
   }
-  else if (number2 == -1){
-    ans = sin(number) * number3;
+  else if (number[1] == -1){
+    ans = sin(number[0]) * number[2];
     cout << "The length of the adjacent side is " << ans << "º\n";
   }
-  else if (number3 == -1){
-    ans = number2 / sin(number);
+  else if (number[2] == -1){
+    ans = number[1] / sin(number[0]);
     cout << "The length of the hypotenuse is " << ans << "º\n";
   }
   else{
@@ -170,82 +170,82 @@ double toa(double number, double number2, double number3, double ans){
   }
 }
 
-double sct(string mode, double number, double number2, double number3, double ans){
+double sct(string mode, double number, double ans){
   cout << "Which trig function would you like to use?\n";
   cout << "1. sine\n";
   cout << "2. cosine\n";
   cout << "3. tangent\n";
   cin >> mode;
   if (mode == "1" || mode == "sin"){
-    soh(number, number2, number3, ans);
+    soh(number, ans);
   }
   else if (mode == "2" || mode == "cos" || mode == "cosine"){
-    cah(number, number2, number3, ans);
+    cah(number, ans);
   }
   else if (mode == "3" || mode == "tan" || mode == "tangent"){
-    toa(number, number2, number3, ans);
+    toa(number, ans);
   }
   else{
     cout << "Error: Invalid input\n";
   }
 }
 
-string basic(double number, string calc, double number2, double ans){
+string basic(double number, string calc, double ans){
   cout << "Enter the first number for your calculation\n"; //print
-  cin >> number; //input for number
+  cin >> number[0]; //input for number
   cout << "Would you like to add, subtract, multiply or divide?\n"; //print
   cin >> calc; //input for calc
 
   if (calc == "add" || calc == "plus" || calc == "+"){ //if calc is add
-    number2 = inp2(number2);
-    add(number, number2, ans);
+    number[1] = inp2(number[1]);
+    add(number, ans);
   }
   else if (calc == "subtract" || calc == "minus" || calc == "-"){ //if calc is subtract
-    number2 = number2 = inp2(number2);
-    subtract(number, number2, ans);
+    number[1] = inp2(number[1]);
+    subtract(number, ans);
   }
   else if (calc == "multiply" || calc == "times" || calc == "x"){ //if calc is multiply
-    number2 = inp2(number2);
-    multiply(number, number2, ans);
+    number[1] = inp2(number[1]);
+    multiply(number, ans);
   }
   else if (calc == "divide" || calc == "/" || calc == "÷"){ //if calc is divide
-    number2 = inp2(number2);
-    divide(number, number2, ans);
+    number[1] = inp2(number[1]);
+    divide(number, ans);
   }
   else if (calc == "powers" || calc == "power" || calc == "use powers" || calc == "^"){
-    cout << "What would you like to do " << number << " to the power of?\n"; //print
-    cin >> number2; //input for number2
-    ans = pow(number, number2);
-    cout << number << " to the power of " << number2 << " = " << ans << "\n"; //print
+    cout << "What would you like to do " << number[0] << " to the power of?\n"; //print
+    cin >> number[1]; //input for number2
+    ans = pow(number[0], number[1]);
+    cout << number[0] << " to the power of " << number[1] << " = " << ans << "\n"; //print
   }
   else{
     cout << "Error: Invalid input\n"; //print
   }
 }
 
-string port(string calc, double number, double number2, double ans){
+string port(string calc, double number, double ans){
   cout << "Would you like to use powers or roots?\n";
   cin >> calc;
   if (calc == "powers" || calc == "power" || calc == "use powers" || calc == "^"){
     cout << "Enter the first number for your calculation\n"; //print
-    cin >> number; //input for number
-    cout << "What would you like to do " << number << " to the power of?\n"; //print
-    cin >> number2; //input for number2
-    ans = pow(number, number2);
-    cout << number << " to the power of " << number2 << " = " << ans << "\n"; //print
+    cin >> number[0]; //input for number
+    cout << "What would you like to do " << number[0] << " to the power of?\n"; //print
+    cin >> number[1]; //input for number2
+    ans = pow(number[0], number[1]);
+    cout << number[0] << " to the power of " << number[1] << " = " << ans << "\n"; //print
     }
   else if (calc == "roots" || calc == "root"){
     cout << "What number do you want to find the square root of?\n";
-    cin >> number;
-    ans = sqrt(number);
-    cout << "The square root of " << number << " is " << ans << "\n";
+    cin >> number[0];
+    ans = sqrt(number[0]);
+    cout << "The square root of " << number[0] << " is " << ans << "\n";
   }
   else{
     cout << "Error: Invalid input.\n";
   }
 }
 
-string func(string mode, double number, double number2, double number3, double ans, double ans2){
+string func(string mode, double number, double ans, double ans2){
   cout << "What type of formula do you want to use?\n";
   cout << "1. Circles\n";
   cout << "2. Algebra\n";
@@ -259,14 +259,14 @@ string func(string mode, double number, double number2, double number3, double a
     cin >> mode;
   }
     if (mode == "1"){
-      quad(number, number2, number3, ans, ans2);
+      quad(number, ans, ans2);
     }
   else{
     cout << "Error: Invalid input\n";
   }
 }
 
-string trig(string mode, double number, double number2, double number3, double ans){
+string trig(string mode, double number, double ans){
   cout << "Which trig function would you like to use?\n";
   cout << "1. sine\n";
   cout << "2. cosine\n";
@@ -284,7 +284,7 @@ string trig(string mode, double number, double number2, double number3, double a
     tangent(number, ans);
   }
   else if (mode == "4"){
-    sct(mode, number, number2, number3, ans);
+    sct(mode, number, ans);
   }
   else if (mode == "5"){
     cout << "This bit hasn't been coded yet :(\n";
@@ -310,16 +310,16 @@ int main() {
   cout << "4. Triganometry\n";
   cin >> mode;
   if (mode == "1" || mode == "basic maths\n"){
-    basic(number, calc, number2, ans);
+    basic(number, calc, ans);
   }
   else if (mode == "2"){
-    port(calc, number, number2, ans);
+    port(calc, number, ans);
   }
   else if (mode == "3" || mode == "formulas"){
-    func(mode, number, number2, number3, ans, ans2);
+    func(mode, number, ans, ans2);
   }
   else if (mode == "4" || mode == "triganometry" || mode == "trig"){
-    trig(mode, number, number2, number3, ans);
+    trig(mode, number, ans);
   }
   else{
     cout << "Error: Invalid input\n";
