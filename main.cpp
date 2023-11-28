@@ -294,6 +294,22 @@ string trig(string mode, double number, double number2, double number3, double a
   }
 }
 
+string sequ(){
+  cout << "Would you like to find the nth term of a sequence or have one genarated?\n";
+  cout << "1. Find nth term\n";
+  cout << "2. Generate sequence\n";
+  cin >> mode;
+  if (mode == "1"){
+    //placehlder
+  }
+  else if (mode == "2"){
+    //placeholder
+  }
+  else{
+    cout << "Error: Invalid input\n"
+  }
+}
+
 int main() {
   double number; //declares number as ten stored as real
   double number2; //declares number2 as a real
@@ -310,6 +326,7 @@ int main() {
   cout << "2. Powers & roots\n";
   cout << "3. Formulas\n";
   cout << "4. Triganometry\n";
+  cout << "5. Sequences\n"
   cin >> mode;
   if (mode == "1" || mode == "basic maths\n"){
     basic(number, calc, number2, ans);
@@ -322,6 +339,9 @@ int main() {
   }
   else if (mode == "4" || mode == "triganometry" || mode == "trig"){
     trig(mode, number, number2, number3, ans);
+  }
+  else if (mode == "3" || mode == "sequences"){
+    sequ();
   }
   else{
     cout << "Error: Invalid input\n";
