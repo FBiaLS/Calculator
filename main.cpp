@@ -20,7 +20,7 @@ double subtract(double number, double number2, double ans){ //defines function s
 
 double multiply(double number, double number2, double ans){ //defines function multiply as string containing listed varaibles
   ans = number * number2; //multiply number and number2
-  cout << number << "*" << number2 << "=" << ans << "\n"; //print
+  cout << number << "x" << number2 << "=" << ans << "\n"; //print
 }
 
 double divide(double number, double number2, double ans){ //defines function divide as string containing listed varaibles
@@ -35,7 +35,7 @@ double areac(double number, double ans){
 
 double circo(double number, double ans){
   ans = M_PI * number;
-  cout << "The circumference of the circle is " << ans << "\n";
+  cout << "The circomference of the circle is " << ans << "\n";
 }
 
 double modec(string mode, double number, double ans){
@@ -99,11 +99,11 @@ double tangent(double number, double ans){
 }
 
 double soh(double number, double number2, double number3, double ans){
-  cout << "What is the size of the angle? [If you do not have a value input '-1']\n";
+  cout << "What is the size of the angle? [if you do not have a value input '-1']\n";
   cin >> number;
-  cout << "What is the length of the opposite side? [If you do not have a value input '-1']\n";
+  cout << "What is the length of the opposite side? [if you do not have a value input '-1']\n";
   cin >> number2;
-  cout << "What is the length of the hypotenuse? [If you do not have a value input '-1']\n";
+  cout << "What is the length of the hypotenuse? [if you do not have a value input '-1']\n";
   cin >> number3;
   if (number == -1){
     ans = asin(number2 / number3);
@@ -204,7 +204,7 @@ string basic(double number, string calc, double number2, double ans){
     number2 = number2 = inp2(number2);
     subtract(number, number2, ans);
   }
-  else if (calc == "multiply" || calc == "times" || calc == "x" || calc == "*"){ //if calc is multiply
+  else if (calc == "multiply" || calc == "times" || calc == "x"){ //if calc is multiply
     number2 = inp2(number2);
     multiply(number, number2, ans);
   }
@@ -246,7 +246,7 @@ string port(string calc, double number, double number2, double ans){
 }
 
 string func(string mode, double number, double number2, double number3, double ans, double ans2){
-  cout << "What type of formulae do you want to use?\n";
+  cout << "What type of formula do you want to use?\n";
   cout << "1. Circles\n";
   cout << "2. Algebra\n";
   cin >> mode;
@@ -254,7 +254,7 @@ string func(string mode, double number, double number2, double number3, double a
     modec(mode, number, ans);
   }
   else if (mode == "algebra" || mode == "2"){
-    cout << "What formulae would you like to use?\n";
+    cout << "What formula would you like to use?\n";
     cout << "1. The Quadratic formula\n";
     cin >> mode;
   }
@@ -272,7 +272,7 @@ string trig(string mode, double number, double number2, double number3, double a
   cout << "2. cosine\n";
   cout << "3. tangent\n";
   cout << "4. SOH CAH TOA\n";
-  cout << "5. Trig equations\n";
+  cout << "5. trig equations\n";
   cin >> mode;
   if (mode == "1" || mode == "sin"){
     sine(number, ans);
@@ -296,7 +296,7 @@ string trig(string mode, double number, double number2, double number3, double a
 
 string sequ(){
   cout << "Would you like to find the nth term of a sequence or have one genarated?\n";
-  cout << "1. Find the nth term\n";
+  cout << "1. Find nth term\n";
   cout << "2. Generate sequence\n";
   cin >> mode;
   if (mode == "1"){
@@ -324,7 +324,7 @@ int main() {
   cout << "What mode do you want to use?\n";
   cout << "1. Basic maths (+,-,x,÷)\n";
   cout << "2. Powers & roots\n";
-  cout << "3. Formulae\n";
+  cout << "3. Formulas\n";
   cout << "4. Triganometry\n";
   cout << "5. Sequences\n"
   cin >> mode;
@@ -334,7 +334,7 @@ int main() {
   else if (mode == "2"){
     port(calc, number, number2, ans);
   }
-  else if (mode == "3" || mode == "formulae"){
+  else if (mode == "3" || mode == "formulas"){
     func(mode, number, number2, number3, ans, ans2);
   }
   else if (mode == "4" || mode == "triganometry" || mode == "trig"){
