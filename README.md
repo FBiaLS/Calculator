@@ -1,2 +1,2 @@
 # Calculator
-C++ Calculator made by the best programmer in the business
+C++ Calculator made by the best programmer in the business.
