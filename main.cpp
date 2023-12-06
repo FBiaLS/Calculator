@@ -294,7 +294,7 @@ string trig(string mode, double number, double number2, double number3, double a
   }
 }
 
-string sequ(){
+string sequ(string mode){
   cout << "Would you like to find the nth term of a sequence or have one genarated?\n";
   cout << "1. Find nth term\n";
   cout << "2. Generate sequence\n";
@@ -306,7 +306,7 @@ string sequ(){
     //placeholder
   }
   else{
-    cout << "Error: Invalid input\n"
+    cout << "Error: Invalid input\n";
   }
 }
 
@@ -328,7 +328,7 @@ int main() {
   cout << "4. Triganometry\n";
   cout << "5. Sequences\n"
   cin >> mode;
-  if (mode == "1" || mode == "basic maths\n"){
+  if (mode == "1" || mode == "bassic maths\n"){
     basic(number, calc, number2, ans);
   }
   else if (mode == "2"){
@@ -341,7 +341,7 @@ int main() {
     trig(mode, number, number2, number3, ans);
   }
   else if (mode == "3" || mode == "sequences"){
-    sequ();
+    sequ(mode);
   }
   else{
     cout << "Error: Invalid input\n";
