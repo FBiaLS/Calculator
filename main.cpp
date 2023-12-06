@@ -328,7 +328,7 @@ int main() {
   cout << "4. Triganometry\n";
   cout << "5. Sequences\n"
   cin >> mode;
-  if (mode == "1" || mode == "bassic maths\n"){
+  if (mode == "1" || mode == "basic maths\n"){
     basic(number, calc, number2, ans);
   }
   else if (mode == "2"){
