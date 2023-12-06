@@ -326,7 +326,7 @@ int main() {
   cout << "2. Powers & roots\n";
   cout << "3. Formulas\n";
   cout << "4. Triganometry\n";
-  cout << "5. Sequences\n"
+  cout << "5. Sequences\n";
   cin >> mode;
   if (mode == "1" || mode == "basic maths\n"){
     basic(number, calc, number2, ans);
