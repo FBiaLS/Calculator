@@ -147,7 +147,7 @@ double crules(double number, double number2, double number3, double ans, double 
   cout << "The length of the side is " << ans << "\n";
 }
 
-double srule(string mode){
+double srule(string mode, double number, double number2, double number3, double ans){
   cout << "Are you trying to find an angle or a side length\n";
   cout << "1. Angle\n";
   cout << "2. Side\n";
@@ -163,11 +163,11 @@ double srule(string mode){
   }
 }
 
-double crule(string mode){
+double crule(string mode, double number, double number2, double number3, double ans){
   cout << "Are you trying to find an angle or a side length\n";
   cout << "1. Angle\n";
   cout << "2. Side\n";
-  cin >> mode
+  cin >> mode;
   if (mode == "1" || mode == "angle"){
     crulea(number, number2, number3, ans);
   }
