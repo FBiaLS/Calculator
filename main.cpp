@@ -436,7 +436,7 @@ int main() {
     func(mode, number, number2, number3, ans, ans2);
   }
   else if (mode == "4" || mode == "triganometry" || mode == "trig"){
-    trig(mode, number, number2, number3, ans);
+    trig(mode, number, number2, number3, ans, ans2, ans3);
   }
   else if (mode == "3" || mode == "sequences"){
     sequ(mode);
