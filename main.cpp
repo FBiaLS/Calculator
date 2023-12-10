@@ -303,7 +303,7 @@ string trig(string mode, double number, double number2, double number3, double a
     sct(mode, number, number2, number3, ans);
   }
   else if (mode == "5"){
-    tequ();
+    tequ(mode);
   }
   else{
     cout << "Error: Invalid input\n";
