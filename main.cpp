@@ -98,6 +98,87 @@ double tangent(double number, double ans){
   cout << "tan(" << number << ") = " << ans << "\n";
 }
 
+double srulea(double number, double number2, double number3, double ans){
+  cout << "What is the length of the side opposite of the angle you want to find\n"; //a
+  cin >> number;
+  cout << "What is the length of the other side?\n"; //b
+  cin >> number2;
+  cout << "What is the size of the angle?\n"; //sinb
+  cin >> number3;
+  ans = sin(number3) / number2;
+  ans = ans * number;
+  cout << "The angle is " << ans2 << "º\n"
+}
+
+double srules(double number, double number2, double number3, double ans){
+  cout << "What is the size of the angle opposite of the side you want to find\n"; //sina
+  cin >> number;
+  cout << "What is the size of the other angle?\n"; //sinb
+  cin >> number2;
+  cout << "What is the length of the side?\n"; //b
+  cin >> number3;
+  ans = number3 / number2;
+  ans = ans * number;
+  cout << "The lenght of the side is " << ans2 << "\n"
+}
+
+double crulea(double number, double number2, double number3, double ans, double ans2, double ans3){
+  cout << "What is the length of the side opposite the angle you want to find?\n";
+  cin >> number;
+  cout << "What are the lengths of the other two sides\n";
+  cin >> number2;
+  cin >> number3;
+  ans = 2 * number2 * number3; //2bc
+  ans2 = pow(number2, 2) + pow(number3, 2); //b2+c2
+  ans3 = pow(number, 2) - ans2;
+  ans2 = ans3 / ans;
+  cout << "The angle is " << ans2 << "º\n";
+}
+
+double crules(double number, double number2, double number3, double ans, double ans2){
+  cout << "What is the size of angle opposite the side you want to find?\n";
+  cin >> number;
+  cout << "What are the lengths of the other two sides\n";
+  cin >> number2;
+  cin >> number3;
+  ans = 2 * number2 * number3 * cos(number);
+  ans2 = pow(number2, 2) + pow(number3, 2) - ans;
+  ans = sqrt(ans2);
+  cout << "The length of the side is " << ans << "\n";
+}
+
+double srule(double mode){
+  cout << "Are you trying to find an angle or a side length\n";
+  cout << "1. Angle\n";
+  cout << "2. Side\n";
+  cin >> mode
+  if (mode == "1" || mode == "angle"){
+    srulea(number, number2, number3, ans);
+  }
+  else if (mode == "2" || mode == "side"){
+    srules(number, number2, number3, ans);
+  }
+  else{
+    cout << "Error: Invalid input\n";
+  }
+}
+
+double crule(string mode){
+  cout << "Are you trying to find an angle or a side length\n";
+  cout << "1. Angle\n";
+  cout << "2. Side\n";
+  cin >> mode
+  if (mode == "1" || mode == "angle"){
+    crulea(number, number2, number3, ans);
+  }
+  else if (mode == "2" || mode == "side"){
+    crules(number, number2, number3, ans);
+  }
+  else{
+    cout << "Error: Invalid input\n";
+  }
+}
+
 double soh(double number, double number2, double number3, double ans){
   cout << "What is the size of the angle? [if you do not have a value input '-1']\n";
   cin >> number;
@@ -196,10 +277,10 @@ double tequ(string mode){
   cout << "2. Cosine rule\n";
   cin >> mode;
   if (mode == "1" || mode == "sine rule" || mode == "sine"){
-    //placeholder
+    srule(mode);
   }
   else if (mode == "2" || mode == "cosine rule" || mode == "cosine"){
-    //placeholder
+    crule();
   }
   else{
     cout << "Error: Invalid input\n";
@@ -331,10 +412,11 @@ int main() {
   double number2; //declares number2 as a real
   double number3;
   double ans; //declares ans as a real
+  double ans2;
+  double ans3;
   string calc; //declares calc as a string
   double count = 0; //declares count as a real
   string mode;
-  double ans2;
 
   cout << "Welcome to the best C++ calculator, designed for efficiency and simplicity.\n"; //prints welcome message
   cout << "What mode do you want to use?\n";
