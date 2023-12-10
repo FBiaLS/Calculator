@@ -147,7 +147,7 @@ double crules(double number, double number2, double number3, double ans, double 
   cout << "The length of the side is " << ans << "\n";
 }
 
-double srule(string mode, double number, double number2, double number3, double ans, double ans2){
+double srule(string mode, double number, double number2, double number3, double ans){
   cout << "Are you trying to find an angle or a side length\n";
   cout << "1. Angle\n";
   cout << "2. Side\n";
@@ -363,7 +363,7 @@ string func(string mode, double number, double number2, double number3, double a
   }
 }
 
-string trig(string mode, double number, double number2, double number3, double ans){
+string trig(string mode, double number, double number2, double number3, double ans, double ans2, double ans3){
   cout << "Which trig function would you like to use?\n";
   cout << "1. sine\n";
   cout << "2. cosine\n";
