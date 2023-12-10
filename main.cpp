@@ -169,10 +169,10 @@ double crule(string mode, double number, double number2, double number3, double 
   cout << "2. Side\n";
   cin >> mode;
   if (mode == "1" || mode == "angle"){
-    crulea(number, number2, number3, ans);
+    crulea(number, number2, number3, ans, ans2, ans3);
   }
   else if (mode == "2" || mode == "side"){
-    crules(number, number2, number3, ans);
+    crules(number, number2, number3, ans, ans2);
   }
   else{
     cout << "Error: Invalid input\n";
@@ -280,7 +280,7 @@ double tequ(string mode, double number, double number2, double number3, double a
     srule(mode, number, number2, number3, ans);
   }
   else if (mode == "2" || mode == "cosine rule" || mode == "cosine"){
-    crule(mode, number, number2, number3, ans);
+    crule(mode, number, number2, number3, ans, ans2);
   }
   else{
     cout << "Error: Invalid input\n";
