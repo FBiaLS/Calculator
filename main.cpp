@@ -147,7 +147,7 @@ double crules(double number, double number2, double number3, double ans, double 
   cout << "The length of the side is " << ans << "\n";
 }
 
-double srule(string mode, double number, double number2, double number3, double ans){
+double srule(string mode, double number, double number2, double number3, double ans, double ans2){
   cout << "Are you trying to find an angle or a side length\n";
   cout << "1. Angle\n";
   cout << "2. Side\n";
@@ -163,7 +163,7 @@ double srule(string mode, double number, double number2, double number3, double 
   }
 }
 
-double crule(string mode, double number, double number2, double number3, double ans){
+double crule(string mode, double number, double number2, double number3, double ans, double ans2, double ans3){
   cout << "Are you trying to find an angle or a side length\n";
   cout << "1. Angle\n";
   cout << "2. Side\n";
@@ -271,7 +271,7 @@ double sct(string mode, double number, double number2, double number3, double an
   }
 }
 
-double tequ(string mode, double number, double number2, double number3, double ans, double ans2){
+double tequ(string mode, double number, double number2, double number3, double ans, double ans2, double ans3){
   cout << "What equation would you like to use?\n";
   cout << "1. Sine rule\n";
   cout << "2. Cosine rule\n";
@@ -280,7 +280,7 @@ double tequ(string mode, double number, double number2, double number3, double a
     srule(mode, number, number2, number3, ans);
   }
   else if (mode == "2" || mode == "cosine rule" || mode == "cosine"){
-    crule(mode, number, number2, number3, ans, ans2);
+    crule(mode, number, number2, number3, ans, ans2, ans3);
   }
   else{
     cout << "Error: Invalid input\n";
