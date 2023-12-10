@@ -107,7 +107,7 @@ double srulea(double number, double number2, double number3, double ans){
   cin >> number3;
   ans = sin(number3) / number2;
   ans = ans * number;
-  cout << "The angle is " << ans2 << "º\n"
+  cout << "The angle is " << ans << "º\n";
 }
 
 double srules(double number, double number2, double number3, double ans){
@@ -119,7 +119,7 @@ double srules(double number, double number2, double number3, double ans){
   cin >> number3;
   ans = number3 / number2;
   ans = ans * number;
-  cout << "The lenght of the side is " << ans2 << "\n"
+  cout << "The lenght of the side is " << ans << "\n";
 }
 
 double crulea(double number, double number2, double number3, double ans, double ans2, double ans3){
@@ -153,10 +153,10 @@ double srule(string mode, double number, double number2, double number3, double 
   cout << "2. Side\n";
   cin >> mode;
   if (mode == "1" || mode == "angle"){
-    srulea(number, number2, number3, ans);
+    srulea(number, number2, number3, ans, ans2);
   }
   else if (mode == "2" || mode == "side"){
-    srules(number, number2, number3, ans);
+    srules(number, number2, number3, ans, ans2);
   }
   else{
     cout << "Error: Invalid input\n";
@@ -271,7 +271,7 @@ double sct(string mode, double number, double number2, double number3, double an
   }
 }
 
-double tequ(string mode){
+double tequ(string mode, double number, double number2, double number3, double ans, double ans2){
   cout << "What equation would you like to use?\n";
   cout << "1. Sine rule\n";
   cout << "2. Cosine rule\n";
