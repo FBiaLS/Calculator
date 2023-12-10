@@ -153,10 +153,10 @@ double srule(string mode, double number, double number2, double number3, double 
   cout << "2. Side\n";
   cin >> mode;
   if (mode == "1" || mode == "angle"){
-    srulea(number, number2, number3, ans, ans2);
+    srulea(number, number2, number3, ans);
   }
   else if (mode == "2" || mode == "side"){
-    srules(number, number2, number3, ans, ans2);
+    srules(number, number2, number3, ans);
   }
   else{
     cout << "Error: Invalid input\n";
@@ -384,7 +384,7 @@ string trig(string mode, double number, double number2, double number3, double a
     sct(mode, number, number2, number3, ans);
   }
   else if (mode == "5"){
-    tequ(mode);
+    tequ(mode, number, number2, number3, ans, ans2, ans3);
   }
   else{
     cout << "Error: Invalid input\n";
