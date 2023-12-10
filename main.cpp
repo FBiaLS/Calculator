@@ -198,7 +198,7 @@ double tequ(string mode){
   if (mode == "1" || mode == "sine rule" || mode == "sine"){
     //placeholder
   }
-  else if (mode == "2" || mode == "cosine rule" || mode == cosine){
+  else if (mode == "2" || mode == "cosine rule" || mode == "cosine"){
     //placeholder
   }
   else{
