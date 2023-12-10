@@ -190,6 +190,22 @@ double sct(string mode, double number, double number2, double number3, double an
   }
 }
 
+double tequ(string mode){
+  cout << "What equation would you like to use?\n";
+  cout << "1. Sine rule\n";
+  cout << "2. Cosine rule\n";
+  cin >> mode;
+  if (mode == "1" || mode == "sine rule" || mode == "sine"){
+    //placeholder
+  }
+  else if (mode == "2" || mode == "cosine rule" || mode == cosine){
+    //placeholder
+  }
+  else{
+    cout << "Error: Invalid input\n";
+  }
+}
+
 string basic(double number, string calc, double number2, double ans){
   cout << "Enter the first number for your calculation\n"; //print
   cin >> number; //input for number
@@ -287,7 +303,7 @@ string trig(string mode, double number, double number2, double number3, double a
     sct(mode, number, number2, number3, ans);
   }
   else if (mode == "5"){
-    //placeholder
+    tequ();
   }
   else{
     cout << "Error: Invalid input\n";
