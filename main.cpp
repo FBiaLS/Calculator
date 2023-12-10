@@ -151,7 +151,7 @@ double srule(string mode, double number, double number2, double number3, double 
   cout << "Are you trying to find an angle or a side length\n";
   cout << "1. Angle\n";
   cout << "2. Side\n";
-  cin >> mode
+  cin >> mode;
   if (mode == "1" || mode == "angle"){
     srulea(number, number2, number3, ans);
   }
@@ -277,10 +277,10 @@ double tequ(string mode){
   cout << "2. Cosine rule\n";
   cin >> mode;
   if (mode == "1" || mode == "sine rule" || mode == "sine"){
-    srule(mode);
+    srule(mode, number, number2, number3, ans);
   }
   else if (mode == "2" || mode == "cosine rule" || mode == "cosine"){
-    crule();
+    crule(mode, number, number2, number3, ans);
   }
   else{
     cout << "Error: Invalid input\n";
