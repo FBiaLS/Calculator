@@ -342,7 +342,7 @@ string port(string calc, double number, double number2, double ans){
   }
 }
 
-string func(string mode, double number, double number2, double number3, double ans, double ans2, ans3){
+string func(string mode, double number, double number2, double number3, double ans, double ans2, double ans3){
   cout << "What type of formula do you want to use?\n";
   cout << "1. Circles\n";
   cout << "2. Algebra\n";
@@ -360,7 +360,7 @@ string func(string mode, double number, double number2, double number3, double a
       quad(number, number2, number3, ans, ans2);
     }
   else if (mode == "3" || mode == "trig" || mode == "triganometry"){
-    tequ(mode, number, number2, number3, ans, ans2, ans3)
+    tequ(mode, number, number2, number3, ans, ans2, ans3);
   }
   else{
     cout << "Error: Invalid input\n";
