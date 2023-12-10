@@ -346,7 +346,7 @@ string func(string mode, double number, double number2, double number3, double a
   cout << "What type of formula do you want to use?\n";
   cout << "1. Circles\n";
   cout << "2. Algebra\n";
-  cout << "3. Triganometry";
+  cout << "3. Triganometry\n";
   cin >> mode;
   if (mode == "circles" || mode == "1"){
     modec(mode, number, ans);
