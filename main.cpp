@@ -412,15 +412,9 @@ string sequ(string mode){
 }
 
 int main() {
-  double number; //declares number as ten stored as real
-  double number2; //declares number2 as a real
-  double number3;
-  double ans; //declares ans as a real
-  double ans2;
-  double ans3;
-  string calc; //declares calc as a string
+  double number, number2, number3, ans, ans2, ans3;
+  string calc, mode;
   double count = 0; //declares count as a real
-  string mode;
 
   cout << "Welcome to the best C++ calculator, designed for efficiency and simplicity.\n"; //prints welcome message
   cout << "What mode do you want to use?\n";
